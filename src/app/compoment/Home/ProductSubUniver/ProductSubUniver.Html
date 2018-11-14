@@ -1,0 +1,38 @@
+
+<section>
+    <fieldset>
+        <legend>
+        <div style="text-align: center">
+                
+                <img width="40px" height="'0px" src="{{productsubuniver[0].ImageHomeSubUniver}}">          
+        </div>
+    </legend>
+    </fieldset>
+        <div class="container">            
+            <div class="row">  
+                    <left-menu></left-menu>   
+                <div class="col-sm-9 padding-right">
+                    <div class="features_items"><!--features_items-->
+                        <div *ngFor="let prdsubuniv of productsubuniver" class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                        <div class="productinfo text-center">
+                                                <a routerLink="/productdetailcomponent/{{prdsubuniv.ProductSubUniverId}}" routerLinkActive="active"> <img width="10px" height="150px" src="{{prdsubuniv.ImageProduct.ImagePath}}" alt="" /></a>  
+                                           
+                                            <!-- <h2>Du {{Product.StartDate}} au {{Product.EndDate}}</h2>-->
+                                            <p>{{prdsubuniv.ProductDescription}}</p>
+                                            <p><strong>{{prdsubuniv.PriceTtc}}€</strong> Au lieu de <del style="color: red"> {{prdsubuniv.OldePrice}}€</del></p>
+                                            <!-- <a routerLink="/productdetailcomponent/{{prdsubuniv.ProductSubUniverId}}" class="btn btn-default add-to-cart">Plus de détail</a> -->
+                                            <!-- <button type="button" (click)="addProductToCart(prdsubuniv, 1) " class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Achat express</button> -->
+                                            <ng-template [ngIf]="prdsubuniv.ProductQuantity == 0"><del style="color: red">Epuisé</del></ng-template>
+                                            <ng-template [ngIf]="prdsubuniv.ProductQuantity > 0"><a href="{{prdsubuniv.Reference}}" target="_blank" class="btn btn-default add-to-cart">Plus de détail</a></ng-template>
+                                        </div>                                       
+                                </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+    </section>

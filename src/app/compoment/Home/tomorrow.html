@@ -1,0 +1,32 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 padding-right">
+                    <div class="features_items"><!--features_items-->
+                        <h2 class="title text-center">Livraison rapide </h2>
+                        <div style="height: 10px"></div>
+                        <div *ngFor="let productItem of product"  class="col-sm-4">
+                            <div class="product-image-wrapper">
+                               
+                                <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img width="10%" height="200px" src="{{productItem.ImagePath}}" alt="" />                                   
+                                           
+                                        </div>
+                                        <div class="product-overlay">
+                                            <div class="overlay-content">
+                                                    <p style="color: black">{{productItem.ProductName}}</p>
+                                                    <p style="color: black">Fin de la vente:</p>
+                                                    <p style="color:darkmagenta">{{productItem.EndDate|date:'dd/MM/y'}}</p>                                               
+                                                <a routerLink="/productsubunivercomponent/{{productItem.ProductId}}" routerLinkActive="active" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Accéder à la vente</a>
+                                            </div>
+                                        </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>

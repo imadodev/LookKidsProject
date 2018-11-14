@@ -1,0 +1,62 @@
+﻿<header id="header">
+    <div class="header-middle">
+        <!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="index.html"><img width="170px" height="60px" src="{{netImage}}" alt="" /></a>
+                    </div>
+                    <div class="btn-group pull-right">
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="shop-menu pull-right">
+                        <ul class="nav navbar-nav">
+                            <!-- <li><a routerLink="/usercomponent" routerLinkActive="active"><i class="fa fa-user"></i>{{itemUser}}</a></li>
+                            <li><a [attr.disabled]="itemCount === 0 ? true : null" routerLink="/cardcomponent"  routerLinkActive="active"><i class="fa fa-shopping-cart"></i> {{itemCount}}</a></li>
+                            <li *ngIf="loguser"><a  (click)="logout()"><i class="fa fa-user"></i>Déconnecter</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-middle-->
+    <div class="header-bottom">
+        <!--header-bottom-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a routerLink="/producthomecomponent" class="active">ACCUEIL</a></li>
+                            <li>
+                                <a routerLink="/producthomecomponent">TOUTES LES VENTES </a>
+                            </li>
+                            <li>
+                                <a routerLink="/tomorrowcomponent" routerLinkActive="active">LIVRAISON RAPIDE</a>
+                            </li>
+                            <li><a routerLink="/flashcomponent">VENTE FLASH</a></li>
+                           <li><a routerLink="/futurcomponent" routerLinkActive="active">VENTE A VENIR</a></li>                       
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="search_box pull-right">
+                        <input type="text" placeholder="Chercher" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-bottom-->
+</header>
+
+<router-outlet></router-outlet>
